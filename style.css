@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Rubik Glitch", sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: #e0e0e0;
+    background-color: #040404;
+}
+
+.bg-layer {
+    position: fixed;
+    inset: 0;
+    z-index: -3;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#bg1 {
+    background-image: url("images/bg1.png");
+}
+
+#bg2 {
+    background-image: url("images/bg2.png");
+    animation: bgFade 2s ease-in-out infinite alternate;
+}
+
+#bg3 {
+    background-image: url("images/bg3.png");
+    opacity: 0;
+    transition: opacity 0.01s linear;
+    z-index: -1;
+}
+
+@keyframes bgFade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.container {
+    width: 500px;
+    margin: 60px auto;
+    background: rgba(40, 40, 40, 0.92);
+    backdrop-filter: blur(4px);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #555;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4),
+                0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #f0f0f0;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #666;
+    border-radius: 8px;
+    background: #3b3b3b;
+    color: white;
+    font-family: "Raleway", sans-serif;
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #5a5a5a;
+    color: white;
+    cursor: pointer;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #707070;
+}
+
+ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 12px;
+    background: #3a3a3a;
+    border-radius: 8px;
+    border: 1px solid #555;
+}
+
+li span {
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.delete-btn {
+    background: #666;
+}
+
+.delete-btn:hover {
+    background: #888;
+}
